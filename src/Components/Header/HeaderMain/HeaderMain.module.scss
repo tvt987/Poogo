@@ -1,0 +1,39 @@
+.wrapper {
+    height: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+
+    .header-left {
+        width: 150px;
+        height: 66px;
+        display: flex;
+    }
+
+    .header-center {
+        display: flex;
+        min-width: 204px;
+        height: 66px;
+        align-items: center;
+    }
+
+    .header-right {
+        display: flex;
+        width: 232px;
+        height: 66px;
+        align-items: center;
+        .icon {
+            color: var(--whiteColor);
+        }
+    }
+
+    .text {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--whiteColor);
+        b {
+            color: #4bd963;
+        }
+    }
+}
