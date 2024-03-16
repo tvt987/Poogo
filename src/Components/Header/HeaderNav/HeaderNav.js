@@ -4,6 +4,7 @@ import { SearchIcon } from '~/Static/icons/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAlignLeft, faAngleDown, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import HeaderProducts from './HeaderProducts/HeaderProducts';
+import HeaderNews from './HeaderNews/HeaderNews';
 
 const cx = classNames.bind(styles);
 function HeaderNav() {
@@ -26,15 +27,7 @@ function HeaderNav() {
                             TIN TỨC
                             <FontAwesomeIcon className={cx('icon')} icon={faAngleDown}></FontAwesomeIcon>
                             <div className={cx('news-content')}>
-                                <ul>
-                                    <li>
-                                        <span>Tin tức lv1</span>
-                                    </li>
-                                    <li>
-                                        Tin tức lv2
-                                        <FontAwesomeIcon className={cx('icon')} icon={faAngleRight}></FontAwesomeIcon>
-                                    </li>
-                                </ul>
+                                <HeaderNews></HeaderNews>
                             </div>
                         </li>
                         <li className={cx('item')}>LIÊN HỆ</li>

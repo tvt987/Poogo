@@ -23,7 +23,7 @@
             font-size: 12px;
             &:hover {
                 background-color: rgba(42, 0, 0, 0.219);
-                color: #04ff2a;
+                color: #4bd963;
             }
             .icon {
                 margin-left: 2px;
@@ -49,32 +49,21 @@
 }
 
 .news-content {
+    display: block;
     position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--whiteColor);
-    color: var(--blackColor);
-    width: 180px;
-    font-size: 14px;
-    border-left: 3px solid rgb(0, 219, 0);
-    border-radius: 4px;
-    box-shadow: 0 0 5px gray;
+    background-color: black;
+    // transform: scaleY(0); /* Hiển thị nội dung với kích thước ban đầu */
+    // transform-style: preserve-3d;
+    // transition: all 0.5s ease;
+    // transform-origin: top;
 
-    li {
-        display: flex;
-        height: 48px;
-        padding: 0 8px;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.482);
-        span {
-            display: flex;
-            align-items: center;
-        }
-        .icon {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-        }
-    }
+    transform: perspective(1000px) rotate3d(1, 0, 0, -90deg); /* Ẩn nội dung ban đầu */
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item-news:hover .news-content {
+    display: block;
+    // transform: scaleY(1); /* Ẩn nội dung khi không hover */
+    transform: perspective(1000px) rotate3d(1, 0, 0, 0deg); /* Hiển thị nội dung với hiệu ứng lật từ trên xuống */
 }
