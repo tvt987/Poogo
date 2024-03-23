@@ -3,22 +3,35 @@ import styles from './HeaderMain.module.scss';
 import Logo from '~/Components/Logo/Logo';
 import { BagIcon, ExchangeIcon, HeartIcon, PhoneIcon, UserIcon } from '~/Static/icons/icons';
 import Icon from '~/Components/Icon';
+import Tippy from '@tippyjs/react';
 
 const cx = classNames.bind(styles);
-function HeaderMain() {
+function HeaderMain({ scrolled }) {
+    let classNames = cx('wrapper');
+    if (scrolled == true && classNames) {
+        classNames = cx('wrapper', {
+            [styles.scrolled]: scrolled,
+        });
+    }
     return (
-        <div className={cx('wrapper')}>
+        <div className={classNames}>
             <div className={cx('header-left')}>
-                <Logo></Logo>
+                <Tippy className={cx('title')} content="Trang chủ" placement="bottom">
+                    <div>
+                        <Logo></Logo>
+                    </div>
+                </Tippy>
             </div>
-            <div className={cx('header-center')}>
-                <Icon green>
-                    <PhoneIcon></PhoneIcon>
-                </Icon>
-                <span className={cx('text')}>
-                    GỌI NGAY <b>19006750</b>
-                </span>
-            </div>
+            <Tippy className={cx('title')} content="19006750" placement="bottom">
+                <div className={cx('header-center')}>
+                    <Icon green>
+                        <PhoneIcon></PhoneIcon>
+                    </Icon>
+                    <span className={cx('text')}>
+                        GỌI NGAY <b>19006750</b>
+                    </span>
+                </div>
+            </Tippy>
             <div className={cx('header-right')}>
                 <a src="/" className={cx('icon')}>
                     <Icon>
@@ -29,16 +42,19 @@ function HeaderMain() {
                     <Icon>
                         <ExchangeIcon></ExchangeIcon>
                     </Icon>
+                    <div className={cx('number')}>0</div>
                 </a>
                 <a src="/" className={cx('icon')}>
                     <Icon>
                         <HeartIcon></HeartIcon>
                     </Icon>
+                    <div className={cx('number')}>0</div>
                 </a>
                 <a src="/" className={cx('icon')}>
                     <Icon>
                         <BagIcon></BagIcon>
                     </Icon>
+                    <div className={cx('number')}>0</div>
                 </a>
             </div>
         </div>

@@ -21,6 +21,7 @@
             line-height: 60px;
             padding: 0 20px;
             font-size: 12px;
+            font-weight: 800;
             &:hover {
                 background-color: rgba(42, 0, 0, 0.219);
                 color: #4bd963;
@@ -56,7 +57,7 @@
     // transform-style: preserve-3d;
     // transition: all 0.5s ease;
     // transform-origin: top;
-
+    left: 0;
     transform: perspective(1000px) rotate3d(1, 0, 0, -90deg); /* Ẩn nội dung ban đầu */
     transform-origin: top;
     transition: transform 0.5s ease-in-out;
@@ -66,4 +67,27 @@
     display: block;
     // transform: scaleY(1); /* Ẩn nội dung khi không hover */
     transform: perspective(1000px) rotate3d(1, 0, 0, 0deg); /* Hiển thị nội dung với hiệu ứng lật từ trên xuống */
+}
+
+.title {
+    color: white;
+    background-color: black;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px gray;
+    font-size: 12px;
+}
+
+.wrapper-search {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.wrapper-search.active {
+    display: block;
 }
