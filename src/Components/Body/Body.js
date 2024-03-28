@@ -64,34 +64,74 @@ function Body() {
         }
     }
     return (
-        <div className={cx('carousel')}>
-            <div ref={slideRef} className={cx('slides')}>
-                <div className={cx('slide')}>
-                    <img
-                        src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/slider_1.png?1708418149368"
-                        alt="Image 1"
-                    />
+        <div>
+            <div className={cx('carousel-1')}>
+                <div ref={slideRef} className={cx('slides')}>
+                    <div className={cx('slide')}>
+                        <img
+                            src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/slider_1.png?1708418149368"
+                            alt="Image 1"
+                        />
+                    </div>
+                    <div className={cx('slide')}>
+                        <img
+                            src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/slider_2.png?1708418149368"
+                            alt="Image 2"
+                        />
+                    </div>
+                    <div className={cx('slide')}>
+                        <img
+                            src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/slider_1.png?1708418149368"
+                            alt="Image 1"
+                        />
+                    </div>
                 </div>
-                <div className={cx('slide')}>
-                    <img
-                        src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/slider_2.png?1708418149368"
-                        alt="Image 2"
-                    />
-                </div>
-                <div className={cx('slide')}>
-                    <img
-                        src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/slider_1.png?1708418149368"
-                        alt="Image 1"
-                    />
-                </div>
+                <button className={cx('prev')} onClick={prevSlide}>
+                    &#10094;
+                </button>
+                <button className={cx('next')} onClick={nextSlide}>
+                    &#10095;
+                </button>
+                <div className={cx('dots')}>{dots.map((item) => item)}</div>
             </div>
-            <button className={cx('prev')} onClick={prevSlide}>
-                &#10094;
-            </button>
-            <button className={cx('next')} onClick={nextSlide}>
-                &#10095;
-            </button>
-            <div className={cx('dots')}>{dots.map((item) => item)}</div>
+            <div className={cx('carousel-2')}>
+                <div className={cx('header')}>
+                    <div className={cx('title')}>Toàn bộ sản phẩm đều là chính hãng</div>
+                    <div className={cx('list-products')}>DANH MỤC SẢN PHẨM</div>
+                </div>
+                <div className={cx('gallery')}>
+                    <a className={cx('gallery-item')}>
+                        <img src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/section_home_category1.jpg?1708418149368" />
+                        <div className={cx('caption')}>Chạy bộ</div>
+                    </a>
+                    <a className={cx('gallery-item')}>
+                        <img src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/section_home_category2.jpg?1708418149368" />
+                        <div className={cx('caption')}>Leo núi</div>
+                    </a>
+                    <a className={cx('gallery-item')}>
+                        <img src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/section_home_category3.jpg?1708418149368" />
+                        <div className={cx('caption')}>Quần vợt</div>
+                    </a>
+                    <a className={cx('gallery-item')}>
+                        <img src="https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/section_home_category4.jpg?1708418149368" />
+                        <div className={cx('caption')}>Giày bóng rổ</div>
+                    </a>
+                </div>
+                <marquee className={cx('slide-1')} behavior="scroll" direction="left" scrollamount="20">
+                    <span>Tặng quà trên mỗi đơn hàng từ 500k</span>
+                    <span>Giảm 15% cho đơn hàng đầu tiên từ 699k</span>
+                    <span>Miễn phí vận chuyển từ đơn hàng 599k</span>
+                    <span>Đổi hàng trong 30 ngày</span>
+                    <span>Tặng quà trên mỗi đơn hàng từ 500k</span>
+                    <span>Giảm 15% cho đơn hàng đầu tiên từ 699k</span>
+                    <span>Miễn phí vận chuyển từ đơn hàng 599k</span>
+                    <span>Đổi hàng trong 30 ngày</span>
+                    <span>Tặng quà trên mỗi đơn hàng từ 500k</span>
+                    <span>Giảm 15% cho đơn hàng đầu tiên từ 699k</span>
+                    <span>Miễn phí vận chuyển từ đơn hàng 599k</span>
+                    <span>Đổi hàng trong 30 ngày</span>
+                </marquee>
+            </div>
         </div>
     );
 }

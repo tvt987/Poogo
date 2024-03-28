@@ -1,4 +1,4 @@
-.carousel {
+.carousel-1 {
     display: block;
     width: 100%;
     margin: auto;
@@ -6,18 +6,18 @@
     position: relative;
     user-select: none;
 }
-.carousel img {
+.carousel-1 img {
     width: 100%;
     display: block;
 }
-.carousel .slides {
+.carousel-1 .slides {
     display: flex;
     transition: transform 0.5s ease;
 }
-.carousel .slide {
+.carousel-1 .slide {
     flex: 0 0 100%;
 }
-.carousel button {
+.carousel-1 button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -28,7 +28,7 @@
     z-index: 1;
     user-select: none;
 }
-.carousel .prev {
+.carousel-1 .prev {
     left: 10px;
     width: 46px;
     height: 46px;
@@ -36,7 +36,7 @@
     border-radius: 50%;
     color: var(--whiteColor);
 }
-.carousel .next {
+.carousel-1 .next {
     right: 10px;
     width: 46px;
     height: 46px;
@@ -44,10 +44,10 @@
     border-radius: 50%;
     color: var(--whiteColor);
 }
-.carousel .next:hover {
+.carousel-1 .next:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
-.carousel .prev:hover {
+.carousel-1 .prev:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -88,4 +88,101 @@
 
 .scrolled {
     background-color: black;
+}
+
+// Carousel-2
+.carousel-2 {
+    min-height: 808px;
+    padding: 80px 0 0;
+    .header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 45px;
+        .title {
+            opacity: 0.5;
+            font-size: 16px;
+            letter-spacing: 3px;
+        }
+        .list-products {
+            font-weight: bolder;
+            font-size: 30px;
+        }
+    }
+    .gallery {
+        display: flex;
+        max-width: 1290px;
+        height: 555px;
+        margin: auto;
+        .gallery-item {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            transition: all 1s ease;
+            position: relative;
+            img {
+                height: 100%;
+                // object-fit: contain;
+                min-width: 100%;
+                transform: translateX(-20%);
+            }
+            // .caption {
+            //     color: var(--blackColor);
+            //     font-size: 30px;
+            //     position: absolute;
+            //     bottom: 0;
+            //     left: 0;
+            //     transform: rotate(180deg);
+            //     padding: 40px;
+            //     background-color: #ffffffe6;
+            //     height: 100%;
+            //     span {
+            //         background-color: red;
+            //         bottom: 50%;
+            //         z-index: 999;
+            //         left: -63%;
+            //         width: 180px;
+            //         font-size: 30px;
+            //         position: absolute;
+            //         transform: rotate(-270deg); /* Xoay nó dọc lên từ phía bên trái */
+            //     }
+            // }
+        }
+        .gallery-item:hover {
+            width: 170%;
+        }
+        .gallery-item:hover > .caption {
+            color: var(--blackColor);
+            background-color: #ffffffe6;
+        }
+    }
+}
+.caption {
+    width: 555px;
+    background-color: none;
+    position: absolute;
+    color: var(--whiteColor);
+    left: 0;
+    bottom: -10.8%;
+    // top: 120px;
+    // right: 20%;
+    height: 60px;
+    // line-height: 60px;
+    transform: rotate(270deg);
+    transform-origin: left top;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: all 0.8s linear;
+}
+.slide-1 {
+    height: 60px;
+    background-color: #c4ffa1;
+    line-height: 60px;
+    span {
+        font-weight: 700;
+        padding: 0 50px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
 }
