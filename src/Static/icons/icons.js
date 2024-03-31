@@ -3,9 +3,11 @@ import {
     faBolt,
     faCircle,
     faExchange,
+    faFire,
     faHeart,
     faPhone,
     faSearch,
+    faTag,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
@@ -21,3 +23,5 @@ export const CircleIcon = () => <FontAwesomeIcon icon={faCircle} />;
 export const BoltIcon = () => <FontAwesomeIcon icon={faBolt} />;
 // export const StarIconS = () => <FontAwesomeIcon icon={faStar} />;
 export const StarIconR = () => <FontAwesomeIcon icon={faStar} />;
+export const FireIcon = () => <FontAwesomeIcon icon={faFire} />;
+export const DiscountIcon = () => <FontAwesomeIcon icon={faTag} />;

@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './FlashSale.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BoltIcon, StarIconR } from '~/Static/icons/icons';
+import { BoltIcon, DiscountIcon, FireIcon, StarIconR } from '~/Static/icons/icons';
 import CountDown from './CountDown/CountDown';
 
 const cx = classNames.bind(styles);
@@ -41,6 +41,15 @@ function FlashSale() {
                 </div>
                 <div className={cx('item')}>
                     <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer18cde9e508ba14790a6210491.jpg?v=1702350243257"></img>
+                    <div className={cx('tag-new')}>
+                        <FireIcon></FireIcon> Mới
+                    </div>
+                    <div className={cx('discount')}>
+                        -21%
+                        <span>
+                            <DiscountIcon></DiscountIcon>
+                        </span>
+                    </div>
                     <div className={cx('product-color')}>
                         <div className={cx('item-color', 'item-color--red')}></div>
                         <div className={cx('item-color', 'item-color--blue')}></div>
@@ -67,7 +76,16 @@ function FlashSale() {
                     </div>
                 </div>
                 <div className={cx('item')}>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer18cde9e508ba14790a6210491.jpg?v=1702350243257"></img>
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer16fd25363242141afa734215a.jpg?v=1702350246057"></img>
+                    <div className={cx('tag-new')}>
+                        <FireIcon></FireIcon> Mới
+                    </div>
+                    <div className={cx('discount')}>
+                        -21%
+                        <span>
+                            <DiscountIcon></DiscountIcon>
+                        </span>
+                    </div>
                     <div className={cx('product-color')}>
                         <div className={cx('item-color', 'item-color--red')}></div>
                         <div className={cx('item-color', 'item-color--blue')}></div>
@@ -94,7 +112,16 @@ function FlashSale() {
                     </div>
                 </div>
                 <div className={cx('item')}>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer18cde9e508ba14790a6210491.jpg?v=1702350243257"></img>
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer1d87b62817a694e059205f86f.jpg?v=1702350240540"></img>
+                    <div className={cx('tag-new')}>
+                        <FireIcon></FireIcon> Mới
+                    </div>
+                    <div className={cx('discount')}>
+                        -21%
+                        <span>
+                            <DiscountIcon></DiscountIcon>
+                        </span>
+                    </div>
                     <div className={cx('product-color')}>
                         <div className={cx('item-color', 'item-color--red')}></div>
                         <div className={cx('item-color', 'item-color--blue')}></div>
@@ -121,7 +148,16 @@ function FlashSale() {
                     </div>
                 </div>
                 <div className={cx('item')}>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer18cde9e508ba14790a6210491.jpg?v=1702350243257"></img>
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer112344afd2dbe4842b4562af5.jpg?v=1702350247140"></img>
+                    <div className={cx('tag-new')}>
+                        <FireIcon></FireIcon> Mới
+                    </div>
+                    <div className={cx('discount')}>
+                        -21%
+                        <span>
+                            <DiscountIcon></DiscountIcon>
+                        </span>
+                    </div>
                     <div className={cx('product-color')}>
                         <div className={cx('item-color', 'item-color--red')}></div>
                         <div className={cx('item-color', 'item-color--blue')}></div>
