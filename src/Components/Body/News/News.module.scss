@@ -1,0 +1,109 @@
+.wrapper {
+    width: 1290px;
+    margin: 60px auto;
+    border-bottom: 1px solid gray;
+    padding-bottom: 80px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        align-items: center;
+        text-transform: uppercase;
+
+        .title {
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .all {
+            font-size: 14px;
+            opacity: 0.7;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 49.9%;
+                left: -19%;
+                width: 30px;
+                height: 1px;
+                background-color: black;
+            }
+        }
+    }
+
+    .article {
+        display: flex;
+
+        .item {
+            flex: 1;
+            margin: 0 8px;
+
+            .wrapper-img {
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                .left,
+                .right {
+                    position: absolute;
+                    height: 100%;
+                    width: 200%;
+                    top: 0;
+                    transition: transform 0.5s ease;
+                }
+
+                .left {
+                    left: 0;
+                    background-color: rgba(3, 0, 0, 0.055);
+                    clip-path: polygon(0% 0%, 100% 0%, 0% 200%);
+                    transform: translateX(-100%);
+                }
+
+                .right {
+                    right: 0;
+                    background-color: rgba(3, 0, 0, 0.055);
+                    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%);
+                    transform: translateX(100%);
+                }
+            }
+
+            .date {
+                font-size: 12px;
+                opacity: 0.7;
+            }
+
+            .name {
+                font-size: 18px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 8px 0;
+                transition: all 0.5s ease;
+                color: var(--colorBlack);
+                &:hover {
+                    color: #30f751;
+                }
+            }
+
+            .content {
+                opacity: 0.8;
+                font-size: 16px;
+            }
+
+            &:hover {
+                .left {
+                    transform: translateX(0);
+                }
+
+                .right {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}

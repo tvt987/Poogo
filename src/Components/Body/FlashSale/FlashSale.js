@@ -1,12 +1,51 @@
 import classNames from 'classnames/bind';
 import styles from './FlashSale.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BoltIcon, DiscountIcon, FireIcon, StarIconR } from '~/Static/icons/icons';
+import { BoltIcon, DiscountIcon, FireIcon, HeartIcon, NextIcon, PrevIcon, StarIconR } from '~/Static/icons/icons';
 import CountDown from './CountDown/CountDown';
+import Product from '../components/Product/Product';
+import { useEffect, useRef, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function FlashSale() {
+    const [direction, setDirection] = useState('next'); // Thêm biến trạng thái để theo dõi hướng dịch chuyển
+    const productRef = useRef();
+    const [totalChilren, setTotalChildren] = useState(0);
+    const [percent, setPercent] = useState(0);
+    const [currentPercent, setCurrentPercent] = useState(0);
+    useEffect(() => {
+        if (productRef.current) {
+            const childrenCount = productRef.current.children.length;
+            setTotalChildren(childrenCount);
+            setPercent(100 / childrenCount);
+            if (direction === 'prev' && currentPercent > 0) {
+                setCurrentPercent(-(totalChilren - 4) * percent);
+            }
+        }
+    }, [percent, direction, currentPercent]);
+
+    const handleNext = () => {
+        setDirection('next'); // Đặt hướng dịch chuyển là "next"
+        const newPercent = currentPercent - percent;
+        if (newPercent < -(totalChilren - 4) * percent) {
+            setCurrentPercent(0);
+        } else {
+            setCurrentPercent(newPercent);
+        }
+        productRef.current.style.transform = `translateX(${newPercent}%)`;
+    };
+
+    const handlePrev = () => {
+        setDirection('prev'); // Đặt hướng dịch chuyển là "prev"
+        const newPercent = currentPercent + percent;
+        if (newPercent > 0) {
+            setCurrentPercent(-(totalChilren - 4) * percent);
+        } else {
+            setCurrentPercent(newPercent);
+        }
+        productRef.current.style.transform = `translateX(${newPercent}%)`;
+    };
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
@@ -39,148 +78,22 @@ function FlashSale() {
                         <h2>Nhanh tay kẻo lỡ</h2>
                     </div>
                 </div>
-                <div className={cx('item')}>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer18cde9e508ba14790a6210491.jpg?v=1702350243257"></img>
-                    <div className={cx('tag-new')}>
-                        <FireIcon></FireIcon> Mới
+
+                <div className={cx('products')}>
+                    <div onClick={() => handleNext()} className={cx('next')}>
+                        <NextIcon></NextIcon>
                     </div>
-                    <div className={cx('discount')}>
-                        -21%
-                        <span>
-                            <DiscountIcon></DiscountIcon>
-                        </span>
+                    <div onClick={() => handlePrev()} className={cx('prev')}>
+                        <PrevIcon></PrevIcon>
                     </div>
-                    <div className={cx('product-color')}>
-                        <div className={cx('item-color', 'item-color--red')}></div>
-                        <div className={cx('item-color', 'item-color--blue')}></div>
-                        <div className={cx('item-color', 'item-color--green')}></div>
-                    </div>
-                    <div className={cx('name')}>Giày nam Jordan Max Aura</div>
-                    <div className={cx('price')}>
-                        <div className={cx('price-new')}>3.200.000đ</div>
-                        <div className={cx('price-old')}>4.500.000đ</div>
-                    </div>
-                    <div className={cx('count-item')}>
-                        <div className={cx('count-down')}></div>
-                        <div className={cx('quantity-sold')}>
-                            Đã bán:
-                            <span> 80 sản phẩm</span>
-                        </div>
-                    </div>
-                    <div className={cx('stars')}>
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>
-                    </div>
-                </div>
-                <div className={cx('item')}>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer16fd25363242141afa734215a.jpg?v=1702350246057"></img>
-                    <div className={cx('tag-new')}>
-                        <FireIcon></FireIcon> Mới
-                    </div>
-                    <div className={cx('discount')}>
-                        -21%
-                        <span>
-                            <DiscountIcon></DiscountIcon>
-                        </span>
-                    </div>
-                    <div className={cx('product-color')}>
-                        <div className={cx('item-color', 'item-color--red')}></div>
-                        <div className={cx('item-color', 'item-color--blue')}></div>
-                        <div className={cx('item-color', 'item-color--green')}></div>
-                    </div>
-                    <div className={cx('name')}>Giày nam Jordan Max Aura</div>
-                    <div className={cx('price')}>
-                        <div className={cx('price-new')}>3.200.000đ</div>
-                        <div className={cx('price-old')}>4.500.000đ</div>
-                    </div>
-                    <div className={cx('count-item')}>
-                        <div className={cx('count-down')}></div>
-                        <div className={cx('quantity-sold')}>
-                            Đã bán:
-                            <span> 80 sản phẩm</span>
-                        </div>
-                    </div>
-                    <div className={cx('stars')}>
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>
-                    </div>
-                </div>
-                <div className={cx('item')}>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer1d87b62817a694e059205f86f.jpg?v=1702350240540"></img>
-                    <div className={cx('tag-new')}>
-                        <FireIcon></FireIcon> Mới
-                    </div>
-                    <div className={cx('discount')}>
-                        -21%
-                        <span>
-                            <DiscountIcon></DiscountIcon>
-                        </span>
-                    </div>
-                    <div className={cx('product-color')}>
-                        <div className={cx('item-color', 'item-color--red')}></div>
-                        <div className={cx('item-color', 'item-color--blue')}></div>
-                        <div className={cx('item-color', 'item-color--green')}></div>
-                    </div>
-                    <div className={cx('name')}>Giày nam Jordan Max Aura</div>
-                    <div className={cx('price')}>
-                        <div className={cx('price-new')}>3.200.000đ</div>
-                        <div className={cx('price-old')}>4.500.000đ</div>
-                    </div>
-                    <div className={cx('count-item')}>
-                        <div className={cx('count-down')}></div>
-                        <div className={cx('quantity-sold')}>
-                            Đã bán:
-                            <span> 80 sản phẩm</span>
-                        </div>
-                    </div>
-                    <div className={cx('stars')}>
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>
-                    </div>
-                </div>
-                <div className={cx('item')}>
-                    <img src="https://bizweb.dktcdn.net/thumb/large/100/505/077/products/layer112344afd2dbe4842b4562af5.jpg?v=1702350247140"></img>
-                    <div className={cx('tag-new')}>
-                        <FireIcon></FireIcon> Mới
-                    </div>
-                    <div className={cx('discount')}>
-                        -21%
-                        <span>
-                            <DiscountIcon></DiscountIcon>
-                        </span>
-                    </div>
-                    <div className={cx('product-color')}>
-                        <div className={cx('item-color', 'item-color--red')}></div>
-                        <div className={cx('item-color', 'item-color--blue')}></div>
-                        <div className={cx('item-color', 'item-color--green')}></div>
-                    </div>
-                    <div className={cx('name')}>Giày nam Jordan Max Aura</div>
-                    <div className={cx('price')}>
-                        <div className={cx('price-new')}>3.200.000đ</div>
-                        <div className={cx('price-old')}>4.500.000đ</div>
-                    </div>
-                    <div className={cx('count-item')}>
-                        <div className={cx('count-down')}></div>
-                        <div className={cx('quantity-sold')}>
-                            Đã bán:
-                            <span> 80 sản phẩm</span>
-                        </div>
-                    </div>
-                    <div className={cx('stars')}>
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>&nbsp;
-                        <StarIconR></StarIconR>
+                    <div ref={productRef} className={cx('products-list')}>
+                        <Product content="1"></Product>
+                        <Product content="2"></Product>
+                        <Product content="3"></Product>
+                        <Product content="4"></Product>
+                        <Product content="5"></Product>
+                        <Product content="6"></Product>
+                        <Product content="7"></Product>
                     </div>
                 </div>
             </div>
@@ -189,3 +102,20 @@ function FlashSale() {
 }
 
 export default FlashSale;
+
+/* 
+    cách 1: phải lấy được tổng theo bội số 4
+        vd có 7 item
+            7/4 = 1 cộng thêm một nữa ( điều kiện này cần check xem nó có dư không )
+            8/4 = 2 thì không cần cộng thêm ( điều kiện này cần check xem nó có dư không )
+            thì sẽ tính ra được tổng số trang
+
+
+    cách 2: cứ click vào button thì sẽ set translateX 
+        Nếu max thì (điều 
+
+    cách 3: 
+            Tính tổng children. VD: 7 từ đó tính ra % của mỗi item
+            Rồi cứ mỗi lần click button thì translate nếu max(100%) về 0, nếu 0 lên max(100%)
+
+*/
