@@ -11,6 +11,7 @@ import Picture from './Picture/Picture';
 import News from './News/News';
 import Logos from './Logos/Logos';
 import TeamCompany from './TeamCompany/TeamCompany';
+import Gallery from './Gallery/Gallery';
 
 const cx = classNames.bind(styles);
 function Body() {
@@ -27,6 +28,7 @@ function Body() {
             <News></News>
             <Logos></Logos>
             <TeamCompany></TeamCompany>
+            <Gallery></Gallery>
         </div>
     );
 }

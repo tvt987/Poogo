@@ -1,6 +1,6 @@
 import Header from '~/Components/Header/Header';
 import Body from '~/Components/Body/Body';
-import Footer from '~/Components/Footer';
+import Footer from '~/Components/Footer/Footer';
 
 import classNames from 'classnames/bind';
 import styles from './DefaultLayout.module.scss';
