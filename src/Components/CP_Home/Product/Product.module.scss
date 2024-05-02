@@ -1,0 +1,239 @@
+.item {
+    margin: 0 8px;
+    width: 282px; // Chiều rộng của mỗi item, tính cả margin
+    font-size: 16px;
+    flex-shrink: 0;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+    .product-color {
+        margin: 8px 0;
+        padding: 0 8px;
+        width: 100%;
+        display: flex;
+        .item-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 4px;
+        }
+        .item-color--red {
+            background-color: red;
+        }
+        .item-color--blue {
+            background-color: blue;
+        }
+        .item-color--green {
+            background-color: green;
+        }
+    }
+    .name {
+        padding: 0 8px;
+        font-weight: 700;
+        font-size: 20px;
+        margin: 4px 0;
+    }
+    .price {
+        margin: 16px 0 8px 0;
+        display: flex;
+        padding: 0 8px;
+        font-weight: 600;
+        font-size: 17px;
+        .price-new {
+            margin-right: 18px;
+            font-weight: 700;
+        }
+        .price-old {
+            position: relative;
+            color: #b0b0b0;
+            &::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                background-color: #b0b0b0;
+                top: 11px;
+                left: 0;
+            }
+        }
+    }
+    .count-item {
+        margin: 8px 0 18px 8px;
+        width: 100%;
+        height: 18px;
+        z-index: 1;
+        position: relative;
+        background-color: #ffc8cc;
+        border-radius: 10px;
+        .count-down {
+            height: 18px;
+            position: absolute;
+            background-color: #f53d2d;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 80%;
+            background-size: 40px 40px;
+            animation: progress_bar_fill 2s linear infinite;
+            background-image: linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.25) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.25) 50%,
+                rgba(255, 255, 255, 0.25) 75%,
+                transparent 75%,
+                transparent
+            );
+            border-radius: 10px;
+        }
+        .quantity-sold {
+            position: absolute;
+            z-index: 3;
+            color: var(--whiteColor);
+            font-size: 12px;
+            top: -1.5px;
+            left: 10px;
+            span {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+    .stars {
+        margin: 4px 0;
+        padding: 0 8px;
+        color: #ffbe00;
+    }
+    .tag-new {
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        color: var(--whiteColor);
+        background-color: #dd0115;
+        top: 55%;
+        left: 3%;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .discount {
+        position: absolute;
+        width: 80px;
+        height: 30px;
+        top: 1%;
+        left: 3%;
+        color: var(--whiteColor);
+        background-color: #dd0115;
+        line-height: 30px;
+        transform: skew(-15deg);
+        padding: 0 0 0 8px;
+        border-radius: 8px;
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            text-align: center;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background-color: blue;
+        }
+    }
+    .action {
+        position: absolute;
+        right: -40px;
+        top: 44px;
+        opacity: 0;
+    }
+
+    .heart {
+        position: absolute;
+        font-size: 20px;
+        border-radius: 100%;
+        background-color: var(--whiteColor);
+        box-shadow: 0 0 5px rgb(255, 0, 179);
+        color: var(--blackColor);
+        top: 8px;
+        right: 8px;
+        text-align: center;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        color: rgb(255, 0, 179);
+    }
+    .seen {
+        font-size: 16px;
+        border-radius: 100%;
+        background-color: var(--whiteColor);
+        box-shadow: 0 0 5px #727272;
+        color: var(--blackColor);
+        text-align: center;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        color: #727272;
+        margin: 8px 0;
+    }
+    .option {
+        font-size: 16px;
+        border-radius: 100%;
+        background-color: var(--whiteColor);
+        box-shadow: 0 0 5px #727272;
+        color: var(--blackColor);
+
+        margin: 8px 0;
+        text-align: center;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        color: #727272;
+    }
+    .compare {
+        font-size: 16px;
+        border-radius: 100%;
+        background-color: var(--whiteColor);
+        box-shadow: 0 0 5px #727272;
+        color: var(--blackColor);
+
+        margin: 8px 0;
+        text-align: center;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        color: #727272;
+    }
+}
+
+.item:hover .action {
+    opacity: 1;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.col-5 {
+    width: calc(20% - 16px);
+}
+
+@keyframes progress_bar_fill {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 0;
+    }
+}
+
+@keyframes slideEffect {
+    from {
+        transform: translateX(90%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-10%);
+        opacity: 1;
+    }
+}

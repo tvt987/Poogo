@@ -1,0 +1,33 @@
+.wrapper {
+    width: 100%;
+    margin-top: 186px;
+    background-image: url('https://bizweb.dktcdn.net/100/505/077/themes/934930/assets/section_breadcrumb.jpg?1708418149368');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header {
+        margin: auto 0;
+        text-align: center;
+        font-weight: 500;
+    }
+    .name {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .title {
+        font-size: 14px;
+    }
+    .icon {
+        font-size: 4px;
+        margin: 0 8px;
+    }
+    .about {
+        opacity: 0.5;
+        display: inline;
+    }
+}

@@ -1,0 +1,163 @@
+.gender {
+    flex: 1;
+    position: relative;
+    .icon {
+        position: absolute;
+    }
+    &.gender--male {
+        .icon--plus1 {
+            bottom: 12%;
+            left: 34%;
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            z-index: 99;
+            &::after {
+                z-index: 1;
+                position: absolute;
+                content: '';
+                background-color: #02e4f4;
+                border-radius: 50%;
+                bottom: 0;
+                left: 0;
+                top: 0;
+                right: 0;
+                animation: SideEffect 1s ease infinite;
+            }
+        }
+        .icon--close1 {
+            display: none;
+            bottom: 12%;
+            left: 34%;
+            font-size: 16px;
+            background-color: white;
+            color: rgb(236, 4, 4);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            &::after {
+                z-index: 1;
+                position: absolute;
+                content: '';
+                background-color: #02e4f4;
+                border-radius: 50%;
+                bottom: 0;
+                left: 0;
+                top: 0;
+                right: 0;
+                animation: SideEffect 1s ease infinite;
+            }
+        }
+        .icon--plus2 {
+            bottom: 28%;
+            right: 26%;
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            &::after {
+                z-index: 1;
+                position: absolute;
+                content: '';
+                background-color: #02e4f4;
+                border-radius: 50%;
+                bottom: 0;
+                left: 0;
+                top: 0;
+                right: 0;
+                animation: SideEffect 1s ease infinite;
+            }
+        }
+        .icon--close2 {
+            display: none;
+            bottom: 28%;
+            right: 26%;
+            font-size: 16px;
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            &::after {
+                z-index: 1;
+                position: absolute;
+                content: '';
+                background-color: #02e4f4;
+                border-radius: 50%;
+                bottom: 0;
+                left: 0;
+                top: 0;
+                right: 0;
+                animation: SideEffect 1s ease infinite;
+            }
+        }
+    }
+}
+
+.item-product {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 9px;
+    right: -120px;
+    width: 270px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px #b800f0;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -32%;
+        left: 51%;
+        border: 12px solid;
+        border-color: #e7e7e7 transparent transparent transparent;
+    }
+    .img-wrapper {
+        display: flex;
+        justify-content: left;
+        width: 30%;
+    }
+    img {
+        width: 100%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 14px;
+        padding: 0 4px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        background-color: #00f0f0;
+        .name {
+            font-weight: 700;
+        }
+        .price {
+            font-weight: 500;
+        }
+    }
+}
+@keyframes SideEffect {
+    from {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0.3;
+        transform: scale(1.8);
+    }
+}
