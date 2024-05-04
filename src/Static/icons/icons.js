@@ -3,6 +3,7 @@ import {
     faArrowRight,
     faBagShopping,
     faBolt,
+    faChevronDown,
     faCircle,
     faClose,
     faCodeCompare,
@@ -16,10 +17,12 @@ import {
     faPlay,
     faPlus,
     faSearch,
+    faSquareCheck,
+    faTable,
     faTag,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar, faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faStar, faEnvelope, faSquare } from '@fortawesome/free-regular-svg-icons';
 import { faStar as faStarS } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faPinterest, faTwitch, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -51,3 +54,7 @@ export const InstagramIcon = () => <FontAwesomeIcon icon={faInstagram} />;
 export const YoutubeIcon = () => <FontAwesomeIcon icon={faYoutube} />;
 export const EnvelopeIcon = () => <FontAwesomeIcon icon={faEnvelope} />;
 export const LocationIcon = () => <FontAwesomeIcon icon={faLocationDot} />;
+export const DownIcon = () => <FontAwesomeIcon icon={faChevronDown} />;
+export const SquareIcon = () => <FontAwesomeIcon icon={faSquare} />;
+export const SquareCheckIcon = () => <FontAwesomeIcon icon={faSquareCheck} />;
+export const GridIcon = () => <FontAwesomeIcon icon={faTable} />;
