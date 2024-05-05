@@ -46,4 +46,9 @@
             }
         }
     }
+    .body {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 28px 0;
+    }
 }

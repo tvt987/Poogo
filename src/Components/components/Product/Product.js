@@ -4,7 +4,7 @@ import { CompareIcon, DiscountIcon, EyeIcon, FireIcon, HeartIcon, ListIcon, Star
 
 const cx = classNames.bind(styles);
 
-function Product({ content, col = 4 }) {
+function Product({ content, col }) {
     const colClass = col ? styles[`col-${col}`] : '';
     return (
         <div

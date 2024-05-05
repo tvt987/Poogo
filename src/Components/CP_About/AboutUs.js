@@ -1,11 +1,11 @@
 import classNames from 'classnames/bind';
-import styles from './AboutUs-2.module.scss';
+import styles from './AboutUs.module.scss';
 import Header from './Header/Header';
 import Body from './Body/Body';
 
 const cx = classNames.bind(styles);
 
-function AboutUs2() {
+function AboutUs() {
     return (
         <div className={cx('wrapper')}>
             <Header></Header>
@@ -14,4 +14,4 @@ function AboutUs2() {
     );
 }
 
-export default AboutUs2;
+export default AboutUs;
