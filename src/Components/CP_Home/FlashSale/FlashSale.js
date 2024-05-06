@@ -3,7 +3,7 @@ import styles from './FlashSale.module.scss';
 import { BoltIcon, DiscountIcon, FireIcon, HeartIcon, NextIcon, PrevIcon, StarIconR } from '~/Static/icons/icons';
 import { useEffect, useRef, useState } from 'react';
 import CountDown from './CountDown/CountDown';
-import Product from '../../Product/Product';
+import Product from '~/Components/components/Product/Product';
 
 const cx = classNames.bind(styles);
 

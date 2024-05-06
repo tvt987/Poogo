@@ -7,6 +7,7 @@ import Footer from '~/Static/Layout/Components/Footer/Footer';
 import About from '~/Pages/About/About';
 import Products from '~/Pages/Products/Products';
 import News from '~/Pages/News/News';
+import Contact from '~/Pages/Contact/Contact';
 const cx = classNames.bind(styles);
 function DefaultLayout() {
     const [scrolled, setScrolled] = useState();
@@ -28,7 +29,7 @@ function DefaultLayout() {
     return (
         <div>
             <Header></Header>
-            <News></News>
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );

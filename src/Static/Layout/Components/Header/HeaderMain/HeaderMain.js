@@ -1,9 +1,9 @@
 import classNames from 'classnames/bind';
 import styles from './HeaderMain.module.scss';
-import Logo from '~/Components/Logo/Logo';
 import { BagIcon, ExchangeIcon, HeartIcon, PhoneIcon, UserIcon } from '~/Static/icons/icons';
-import Icon from '~/Components/Icon';
 import Tippy from '@tippyjs/react';
+import Logo from '~/Components/components/Logo/Logo';
+import Icon from '~/Components/components/Icon';
 
 const cx = classNames.bind(styles);
 function HeaderMain({ scrolled }) {

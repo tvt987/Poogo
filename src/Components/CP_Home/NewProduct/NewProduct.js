@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './NewProduct.module.scss';
-import Product from '../../Product/Product';
+import Product from '~/Components/components/Product/Product';
 
 const cx = classNames.bind(styles);
 function NewProduct({ isNew = false }) {

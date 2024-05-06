@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './ListProduct.module.scss';
 import { GridIcon, ListIcon } from '~/Static/icons/icons';
-import Product from '~/Components/Product/Product';
+import Product from '~/Components/components/Product/Product';
 
 const cx = classNames.bind(styles);
 function ListProduct() {
