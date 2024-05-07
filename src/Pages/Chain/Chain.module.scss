@@ -1,0 +1,57 @@
+.map {
+    width: 100%;
+    iframe {
+        width: 100%;
+        height: 550px;
+    }
+    position: relative;
+    .table {
+        width: 302px;
+        height: 401px;
+        position: absolute;
+        background-color: var(--whiteColor);
+        bottom: 20px;
+        left: 12px;
+        .header {
+            background: #03177e;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 15px 14px;
+            font-size: 17px;
+        }
+        .body {
+            padding: 0 14px;
+            .title {
+                font-size: 15px;
+                color: #555555;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+            select {
+                width: 100%;
+                height: 40px;
+                border: 1px solid rgb(228, 228, 228);
+                outline: none;
+                padding: 0 12px;
+                color: #555555;
+                font-weight: 600;
+                font-size: 13px;
+            }
+        }
+        .footer {
+            margin-top: 12px;
+            padding: 14px;
+            .title {
+                font-size: 16px;
+                font-weight: 800;
+                margin-bottom: 15px;
+                margin-top: 0px;
+                color: #03177e;
+            }
+            .text {
+                color: #555555;
+            }
+        }
+    }
+}

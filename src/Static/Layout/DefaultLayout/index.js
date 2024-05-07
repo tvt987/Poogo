@@ -8,6 +8,7 @@ import About from '~/Pages/About/About';
 import Products from '~/Pages/Products/Products';
 import News from '~/Pages/News/News';
 import Contact from '~/Pages/Contact/Contact';
+import Chain from '~/Pages/Chain/Chain';
 const cx = classNames.bind(styles);
 function DefaultLayout() {
     const [scrolled, setScrolled] = useState();
@@ -29,7 +30,7 @@ function DefaultLayout() {
     return (
         <div>
             <Header></Header>
-            <Contact></Contact>
+            <Chain></Chain>
             <Footer></Footer>
         </div>
     );
