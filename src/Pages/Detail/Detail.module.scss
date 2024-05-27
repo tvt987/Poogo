@@ -1,0 +1,13 @@
+.wrapper {
+    min-height: 300px;
+    width: 100%;
+    width: 1290px;
+    margin: 190px auto 6px auto;
+    display: flex;
+    .right {
+        width: 25%;
+    }
+    .left {
+        width: 75%;
+    }
+}
