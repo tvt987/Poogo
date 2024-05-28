@@ -6,8 +6,10 @@
     display: flex;
     .right {
         width: 25%;
+        height: auto;
     }
     .left {
+        height: auto;
         width: 75%;
     }
 }

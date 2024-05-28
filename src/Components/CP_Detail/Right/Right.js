@@ -59,6 +59,36 @@ function Right() {
                         <div className={cx('condition')}>Điều kiện</div>
                     </div>
                 </div>
+                <div className={cx('item')}>
+                    <div className={cx('body')}>
+                        <div className={cx('name')}>nhập mã: hlu10</div>
+                        <div className={cx('title')}>Mã giảm 10% cho đơn hàng tối thiểu 500k</div>
+                    </div>
+                    <div className={cx('footer')}>
+                        <button>Sao chép mã</button>
+                        <div className={cx('condition')}>Điều kiện</div>
+                    </div>
+                </div>
+                <div className={cx('item')}>
+                    <div className={cx('body')}>
+                        <div className={cx('name')}>nhập mã: hlu10</div>
+                        <div className={cx('title')}>Mã giảm 10% cho đơn hàng tối thiểu 500k</div>
+                    </div>
+                    <div className={cx('footer')}>
+                        <button>Sao chép mã</button>
+                        <div className={cx('condition')}>Điều kiện</div>
+                    </div>
+                </div>
+                <div className={cx('item')}>
+                    <div className={cx('body')}>
+                        <div className={cx('name')}>nhập mã: hlu10</div>
+                        <div className={cx('title')}>Mã giảm 10% cho đơn hàng tối thiểu 500k</div>
+                    </div>
+                    <div className={cx('footer')}>
+                        <button>Sao chép mã</button>
+                        <div className={cx('condition')}>Điều kiện</div>
+                    </div>
+                </div>
             </div>
             <div className={cx('suggest')}>
                 <div className={cx('header')}>có thể bạn sẽ thích</div>
@@ -74,6 +104,7 @@ function Right() {
                                 <div className={cx('price-old')}>4.500.000đ</div>
                             </div>
                         </div>
+                        <div className={cx('discount')}>28%</div>
                     </div>
                     <div className={cx('item')}>
                         <div className={cx('wrapper-img')}>
@@ -86,6 +117,7 @@ function Right() {
                                 <div className={cx('price-old')}>4.500.000đ</div>
                             </div>
                         </div>
+                        <div className={cx('discount')}>28%</div>
                     </div>
                     <div className={cx('item')}>
                         <div className={cx('wrapper-img')}>
@@ -98,6 +130,7 @@ function Right() {
                                 <div className={cx('price-old')}>4.500.000đ</div>
                             </div>
                         </div>
+                        <div className={cx('discount')}>28%</div>
                     </div>
                     <div className={cx('item')}>
                         <div className={cx('wrapper-img')}>
@@ -110,6 +143,7 @@ function Right() {
                                 <div className={cx('price-old')}>4.500.000đ</div>
                             </div>
                         </div>
+                        <div className={cx('discount')}>28%</div>
                     </div>
                 </div>
             </div>

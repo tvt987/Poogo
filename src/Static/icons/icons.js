@@ -3,6 +3,7 @@ import {
     faArrowRight,
     faBagShopping,
     faBolt,
+    faCheck,
     faChevronDown,
     faCircle,
     faClose,
@@ -58,3 +59,4 @@ export const DownIcon = () => <FontAwesomeIcon icon={faChevronDown} />;
 export const SquareIcon = () => <FontAwesomeIcon icon={faSquare} />;
 export const SquareCheckIcon = () => <FontAwesomeIcon icon={faSquareCheck} />;
 export const GridIcon = () => <FontAwesomeIcon icon={faTable} />;
+export const CheckIcon = () => <FontAwesomeIcon icon={faCheck} />;
