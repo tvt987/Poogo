@@ -1,4 +1,5 @@
 import {
+    faAdd,
     faArrowLeft,
     faArrowRight,
     faBagShopping,
@@ -14,6 +15,7 @@ import {
     faHeart,
     faList,
     faLocationDot,
+    faMinus,
     faPhone,
     faPlay,
     faPlus,
@@ -60,3 +62,5 @@ export const SquareIcon = () => <FontAwesomeIcon icon={faSquare} />;
 export const SquareCheckIcon = () => <FontAwesomeIcon icon={faSquareCheck} />;
 export const GridIcon = () => <FontAwesomeIcon icon={faTable} />;
 export const CheckIcon = () => <FontAwesomeIcon icon={faCheck} />;
+export const MinusIcon = () => <FontAwesomeIcon icon={faMinus} />;
+export const AddIcon = () => <FontAwesomeIcon icon={faAdd} />;
