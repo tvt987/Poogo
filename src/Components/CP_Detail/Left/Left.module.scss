@@ -228,11 +228,85 @@
         }
     }
     .description {
-        height: 25%;
-        background-color: black;
+        min-height: 15%;
+        margin-top: 32px;
+        .tabs {
+            display: flex;
+            color: #03177e;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            width: fit-content;
+            position: relative;
+            cursor: pointer;
+
+            .line {
+                position: absolute;
+                width: calc((100% / 3) + 1px);
+                height: 4px;
+                background-color: #03177e;
+                top: 0;
+                left: 0;
+                z-index: 100;
+                transition: all ease 0.5s;
+            }
+            .tab {
+                padding: 12px;
+                border: 1px solid gray;
+                border-bottom: none;
+                transform: translateY(1px);
+                z-index: 2;
+                background-color: var(--whiteColor);
+            }
+            .tab-2 {
+                margin: 0 8px;
+            }
+            .tab-2,
+            .tab-3 {
+                color: #333334;
+                background: #ededed;
+            }
+        }
+        .contents {
+            z-index: 1;
+            border: 1px solid gray;
+            padding: 12px;
+            color: #333333;
+            font-size: 14px;
+
+            .content {
+                line-height: 28px;
+            }
+            .content-2,
+            .content-3 {
+                display: none;
+            }
+            .content-3 {
+                width: 100%;
+                text-align: center;
+                min-height: 100px;
+                .bg {
+                    width: 100%;
+                    min-height: 100px;
+                    background-color: rgba(128, 187, 53, 0.1);
+                    .title {
+                        color: #45596e;
+                        margin: 0 0 20px;
+                    }
+                    button {
+                        background-color: #80bb35;
+                        border-color: #80bb35;
+                        color: var(--whiteColor);
+                        height: 36px;
+                        width: 180px;
+                        border-radius: 8px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
     .types {
-        background-color: violet;
-        height: 30%;
+        height: auto;
     }
 }
