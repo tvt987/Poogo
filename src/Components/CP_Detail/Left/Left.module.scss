@@ -9,15 +9,10 @@
             .main {
                 width: 95%;
                 height: 400px;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    border: 1px solid gray;
-                }
             }
             .list {
                 display: flex;
-                margin-top: 6px;
+                transform: translateY(-20%);
                 .item {
                     width: 87px;
                     height: auto;
@@ -60,6 +55,22 @@
                     display: flex;
                     align-items: center;
                     flex: 1;
+                    .time {
+                        display: flex;
+                        .segment {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-left: 10px;
+                            .number {
+                                font-size: 24px;
+                                font-weight: bold;
+                            }
+                            .text {
+                                font-size: 12px;
+                            }
+                        }
+                    }
                     .days,
                     .hours,
                     .minutes,
@@ -305,8 +316,5 @@
                 }
             }
         }
-    }
-    .types {
-        height: auto;
     }
 }

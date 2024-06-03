@@ -4,12 +4,14 @@ import styles from './ImageHover.module.scss';
 
 const cx = classNames.bind(styles);
 
-function ImageHover() {
+function ImageHover({
+    link = 'https://bizweb.dktcdn.net/thumb/medium/100/505/077/products/layer3.jpg?v=1702350251907',
+}) {
     const imgRef = useRef(null);
     const lensRef = useRef(null);
     const resultRef = useRef(null);
     const containerRef = useRef(null);
-    const [scale, setScale] = useState(3);
+    const [scale, setScale] = useState(3.5);
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
 
@@ -52,14 +54,14 @@ function ImageHover() {
         const handleScroll = (e) => {
             e.preventDefault();
             e.stopPropagation();
-            const newScale = Math.max(1, scale + (e.deltaY < 0 ? 0.3 : -0.3));
+            const newScale = Math.max(1, scale + (e.deltaY < 0 ? 0.35 : -0.35));
             setScale(newScale);
 
             const lens = lensRef.current;
             const result = resultRef.current;
 
-            lens.style.width = `${100 * (3 / newScale)}px`;
-            lens.style.height = `${100 * (3 / newScale)}px`;
+            lens.style.width = `${100 * (3.5 / newScale)}px`;
+            lens.style.height = `${100 * (3.5 / newScale)}px`;
             result.style.backgroundSize = `${newScale * 100}%`;
 
             result.style.backgroundPosition = `-${x * newScale}px -${y * newScale}px`;
@@ -76,11 +78,7 @@ function ImageHover() {
     return (
         <div className={cx('container')} ref={containerRef}>
             <div className={cx('image-container', 'div1')} onMouseMove={moveLens}>
-                <img
-                    ref={imgRef}
-                    src="https://bizweb.dktcdn.net/thumb/grande/100/505/077/products/layer18cde9e508ba14790a6210491.jpg?v=1702350243257"
-                    alt="Descriptive Alt Text"
-                />
+                <img ref={imgRef} src={link} alt="Descriptive Alt Text" />
                 <div className={cx('zoom-lens')} ref={lensRef}></div>
             </div>
             <div className={cx('zoom-result', 'div2')} ref={resultRef}></div>

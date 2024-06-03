@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid gray;
+}
+
+.zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    width: 100px;
+    height: 100px;
+    cursor: none;
+}
+
+.zoom-result {
+    position: absolute;
+    z-index: 3;
+    display: none;
+    top: 0;
+    left: 100%;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #d4d4d4;
+    background-repeat: no-repeat;
+    background-size: 350%;
+    box-shadow: 5px 5px 5px gray;
+    background-image: url('https://bizweb.dktcdn.net/thumb/medium/100/505/077/products/layer3.jpg?v=1702350251907');
+}
+
+.image-container:hover ~ .zoom-result {
+    display: block;
+}

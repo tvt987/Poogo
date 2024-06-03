@@ -10,7 +10,6 @@ import News from '~/Pages/News/News';
 import Contact from '~/Pages/Contact/Contact';
 import Chain from '~/Pages/Chain/Chain';
 import HoverImage from '~/Pages/Test/Test';
-import ImageHover from '~/Pages/ImageHover/ImageHover';
 import Detail from '~/Pages/Detail/Detail';
 const cx = classNames.bind(styles);
 function DefaultLayout() {

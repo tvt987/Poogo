@@ -223,6 +223,12 @@
     border: 1px solid #f4f4f4;
     border-radius: 4px;
 }
+.col-6 {
+    width: calc((100% / 6) - 16px);
+    margin-bottom: 28px;
+    border: 1px solid #f4f4f4;
+    border-radius: 4px;
+}
 @keyframes progress_bar_fill {
     0% {
         background-position: 0 0;
