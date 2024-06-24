@@ -11,6 +11,8 @@ import Contact from '~/Pages/Contact/Contact';
 import Chain from '~/Pages/Chain/Chain';
 import HoverImage from '~/Pages/Test/Test';
 import Detail from '~/Pages/Detail/Detail';
+import Login from '~/Pages/Login/Login';
+import Compare from '~/Pages/Compare/Compare';
 const cx = classNames.bind(styles);
 function DefaultLayout() {
     const [scrolled, setScrolled] = useState();
@@ -32,7 +34,7 @@ function DefaultLayout() {
     return (
         <div>
             <Header></Header>
-            <Detail></Detail>
+            <Home></Home>
             <Footer></Footer>
         </div>
     );

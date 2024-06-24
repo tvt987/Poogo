@@ -1,0 +1,76 @@
+.wrapper {
+    width: 100%;
+
+    margin: 24px 0;
+    table {
+        width: 100%;
+        border-radius: 4px;
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+        tr td:nth-child(1) {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .names {
+            td:nth-child(1) {
+                color: var(--blackColor);
+            }
+            td {
+                font-weight: bold;
+            }
+        }
+        .prices {
+            td:nth-child(1) {
+                color: var(--blackColor);
+            }
+            td {
+                font-weight: 500;
+                color: red;
+            }
+        }
+        .states {
+            td:nth-child(1) {
+                color: var(--blackColor);
+            }
+            td {
+                color: #6f6f6f;
+            }
+        }
+        .types {
+            td:nth-child(1) {
+                color: var(--blackColor);
+            }
+            td {
+                color: #6f6f6f;
+            }
+        }
+        .supplier {
+            td:nth-child(1) {
+                color: var(--blackColor);
+            }
+            td {
+                color: #6f6f6f;
+            }
+        }
+        .uses {
+            td:nth-child(1) {
+                color: var(--blackColor);
+            }
+            td {
+                color: #6f6f6f;
+            }
+            button {
+                padding: 4px;
+                width: 50px;
+                border-radius: 4px;
+                border: none;
+                background-color: #4bd963;
+                color: var(--whiteColor);
+                font-weight: bold;
+                margin-top: 8px;
+            }
+        }
+    }
+}

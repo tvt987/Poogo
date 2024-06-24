@@ -4,9 +4,7 @@ import styles from './ImageHover.module.scss';
 
 const cx = classNames.bind(styles);
 
-function ImageHover({
-    link = 'https://bizweb.dktcdn.net/thumb/medium/100/505/077/products/layer3.jpg?v=1702350251907',
-}) {
+function ImageHover({ link }) {
     const imgRef = useRef(null);
     const lensRef = useRef(null);
     const resultRef = useRef(null);
@@ -75,10 +73,15 @@ function ImageHover({
         };
     }, [scale, x, y]);
 
+    const handleImageLoad = () => {
+        const result = resultRef.current;
+        result.style.backgroundImage = `url('${link}')`;
+    };
+
     return (
         <div className={cx('container')} ref={containerRef}>
             <div className={cx('image-container', 'div1')} onMouseMove={moveLens}>
-                <img ref={imgRef} src={link} alt="Descriptive Alt Text" />
+                <img src={link} alt="Error" ref={imgRef} onLoad={handleImageLoad} />
                 <div className={cx('zoom-lens')} ref={lensRef}></div>
             </div>
             <div className={cx('zoom-result', 'div2')} ref={resultRef}></div>

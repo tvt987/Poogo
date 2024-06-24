@@ -1,5 +1,6 @@
 import {
     faAdd,
+    faArchive,
     faArrowLeft,
     faArrowRight,
     faBagShopping,
@@ -64,3 +65,4 @@ export const GridIcon = () => <FontAwesomeIcon icon={faTable} />;
 export const CheckIcon = () => <FontAwesomeIcon icon={faCheck} />;
 export const MinusIcon = () => <FontAwesomeIcon icon={faMinus} />;
 export const AddIcon = () => <FontAwesomeIcon icon={faAdd} />;
+export const ArchiveIcon = () => <FontAwesomeIcon icon={faArchive} />;

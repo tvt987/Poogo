@@ -57,17 +57,31 @@
                     flex: 1;
                     .time {
                         display: flex;
+                        height: 80%;
+                        margin-right: 8px;
                         .segment {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             margin-left: 10px;
+                            background-color: #f62d3e;
+                            min-width: 50px;
+                            border-radius: 4px;
+                            justify-content: center;
+
                             .number {
-                                font-size: 24px;
+                                font-size: 14px;
                                 font-weight: bold;
                             }
                             .text {
-                                font-size: 12px;
+                                font-size: 10px;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                background-color: var(--whiteColor);
+                                color: #f62d3e;
+                                width: 100%;
+                                text-align: center;
+                                padding: 4px 0;
                             }
                         }
                     }
@@ -90,7 +104,6 @@
                             text-transform: uppercase;
                             text-align: center;
                             font-size: 12px;
-                            margin-top: 4px;
                             font-weight: 700;
                         }
                         margin-right: 6px;
@@ -207,6 +220,7 @@
                     justify-content: center;
                     border: 1px solid rgb(205, 205, 205);
                     color: #8b8b8b;
+                    user-select: none;
                 }
             }
             .ship {
@@ -253,7 +267,7 @@
 
             .line {
                 position: absolute;
-                width: calc((100% / 3) + 1px);
+                min-width: 100px;
                 height: 4px;
                 background-color: #03177e;
                 top: 0;
@@ -268,14 +282,9 @@
                 transform: translateY(1px);
                 z-index: 2;
                 background-color: var(--whiteColor);
-            }
-            .tab-2 {
-                margin: 0 8px;
-            }
-            .tab-2,
-            .tab-3 {
-                color: #333334;
-                background: #ededed;
+                text-align: center;
+                min-width: 100px;
+                margin-right: 4px;
             }
         }
         .contents {

@@ -11,6 +11,7 @@ import News from '~/Components/CP_Home/News/News';
 import Logos from '~/Components/CP_Home/Logos/Logos';
 import TeamCompany from '~/Components/CP_Home/TeamCompany/TeamCompany';
 import Gallery from '~/Components/CP_Home/Gallery/Gallery';
+import WrapperCompare from '~/Components/CP_Compare/WrapperCompare/WrapperCompare';
 
 const cx = classNames.bind(styles);
 function Home() {
@@ -28,6 +29,7 @@ function Home() {
             <Logos></Logos>
             <TeamCompany></TeamCompany>
             <Gallery></Gallery>
+            <WrapperCompare></WrapperCompare>
         </div>
     );
 }

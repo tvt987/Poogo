@@ -3,6 +3,16 @@ import styles from './Right.module.scss';
 
 const cx = classNames.bind(styles);
 function Right() {
+    const handleCopy = (link) => {
+        navigator.clipboard
+            .writeText(link)
+            .then(() => {
+                alert('Đã sao chép liên kết hình ảnh vào clipboard!');
+            })
+            .catch((err) => {
+                console.error('Lỗi khi sao chép: ', err);
+            });
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('discount')}>
@@ -35,7 +45,7 @@ function Right() {
                         <div className={cx('title')}>Mã giảm 10% cho đơn hàng tối thiểu 500k</div>
                     </div>
                     <div className={cx('footer')}>
-                        <button>Sao chép mã</button>
+                        <button onClick={() => handleCopy('HTTPS')}>Sao chép mã</button>
                         <div className={cx('condition')}>Điều kiện</div>
                     </div>
                 </div>
